@@ -8,20 +8,20 @@
 .lg-search-input {
   position: relative;
   background: none;
+  display: flex;
 }
 
 .lg-search-submit {
   position: relative;
+  height: 100% !important;
   z-index: 1;
 }
 
 .lg-search-input-wrap {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding-right: 57px;
           box-sizing: border-box;
      -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -45,7 +45,7 @@
 
     button {
       border: none;
-      width: 130px;
+      width: 110px;
       height: 100%;
 
       text-align: left;
@@ -57,13 +57,10 @@
   }
 
   .lg-base-search {
-    display: inline;
+    flex: 1;
   }
 
   .lg-search-input-wrap {
-    padding-left: 130px;
-    padding-right: 67px;
-
     input {
       padding-left: 18px;
     }
@@ -82,12 +79,10 @@
       clear: both;
       display: block;
       position: relative;
-      overflow: hidden;
     }
 
     .lg-search-input-wrap {
       padding-left: 0;
-      padding-right: 57px;
 
       input {
         padding: 10px 8px;

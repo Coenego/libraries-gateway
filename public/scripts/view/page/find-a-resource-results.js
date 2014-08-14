@@ -17,9 +17,9 @@ define([
     'lodash',
     'jquery',
     'config',
-    'view/search-type-selector',
+    'view/dropdown-selector',
     'bootstrap-collapse'
-], function(_, $, config, TypeSelector) {
+], function(_, $, config, DropdownSelector) {
     'use strict';
 
     var ResultsPage = function() {
@@ -28,7 +28,14 @@ define([
     _.extend(ResultsPage.prototype, {
         'initialize': function() {
             _.bindAll(this);
-            this.typeSelector = new TypeSelector();
+            this.typeSelector = new DropdownSelector({
+                'el': '.js-type-dropdown',
+                'input': '.js-type-input'
+            });
+            this.disciplineSelector = new DropdownSelector({
+                'el': '.js-discipline-dropdown',
+                'input': '.js-discipline-input'
+            });
             this.collapseHiddenFacets();
             this.bindEvents();
         },
@@ -37,7 +44,7 @@ define([
             var hiddenFacets = this.getHiddenFacetsData();
             var currentSearchData = this.getSearchData();
             // If the saved search is the same as the current one we can collapse the facets
-            if (hiddenFacets && hiddenFacets.api === currentSearchData.api && hiddenFacets.keyword === currentSearchData.keyword) {
+            if (hiddenFacets && hiddenFacets.keyword === currentSearchData.keyword) {
                 _.each(hiddenFacets.facets, function(facetId) {
                     var $element = $('#' + facetId);
                     var $link = $('[href="#' + facetId + '"]');
@@ -61,7 +68,6 @@ define([
             if (!this.searchData) {
                 var $results = $('.js-search-results');
                 this.searchData = {
-                    'api': $results.data('api'),
                     'keyword': $results.data('keyword')
                 };
             }

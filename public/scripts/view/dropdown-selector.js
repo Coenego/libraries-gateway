@@ -25,6 +25,9 @@ define([
         if (options.el) {
             this.$el = $(options.el);
         }
+        if (options.input) {
+            this.$input = $(options.input);
+        }
         this.initialize();
     };
 
@@ -37,6 +40,13 @@ define([
         'bindEvents': function() {
             this.$el.find('.js-option').on('click', this.onOptionClick);
             this.$el.find('.js-remove').on('click', this.onRemoveClick);
+            this.on('change', this.updateInput);
+        },
+
+        'updateInput': function(value) {
+            if (this.$input) {
+                this.$input.val(value)
+            }
         },
 
         'onOptionClick': function(event) {

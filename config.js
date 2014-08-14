@@ -102,7 +102,7 @@ config.constants = {
     },
 
     // Available formats (search)
-    'formats': {
+    'contenttypes': {
 
         // Formats that are displayed in the search dropdown
         'Book': {
@@ -132,7 +132,70 @@ config.constants = {
             'displayInSearch': true,
             'summon': 'Paper'
         }
-    }
+    },
+
+    // Summon disciplines
+    'disciplines': [
+        "Agriculture",
+        "Anatomy & Physiology",
+        "Anthropology",
+        "Applied Sciences",
+        "Architecture",
+        "Astronomy & Astrophysics",
+        "Biology",
+        "Botany",
+        "Business",
+        "Chemistry",
+        "Computer Science",
+        "Dance",
+        "Dentistry",
+        "Diet & Clinical Nutrition",
+        "Drama",
+        "Ecology",
+        "Economics",
+        "Education",
+        "Engineering",
+        "Environmental Sciences",
+        "Film",
+        "Forestry",
+        "Geography",
+        "Geology",
+        "Government",
+        "History",
+        "History & Archaeology",
+        "International Relations",
+        "Journalism & Communications",
+        "Languages & Literatures",
+        "Law",
+        "Library & Information Science",
+        "Mathematics",
+        "Medicine",
+        "Meteorology & Climatology",
+        "Military & Naval Science",
+        "Music",
+        "Nursing",
+        "Occupational Therapy & Rehabilitation",
+        "Oceanography",
+        "Parapsychology & Occult Sciences",
+        "Pharmacy, Therapeutics, & Pharmacology",
+        "Philosophy",
+        "Physical Therapy",
+        "Physics",
+        "Political Science",
+        "Psychology",
+        "Public Health",
+        "Recreation & Sports",
+        "Religion",
+        "Sciences",
+        "Social Sciences",
+        "Social Welfare & Social Work",
+        "Sociology & Social History",
+        "Statistics",
+        "Veterinary Medicine",
+        "Visual Arts",
+        "Women's Studies",
+        "Zoology"
+    ]
 };
 
 /**
@@ -162,7 +225,7 @@ config.nodes = {
             'minTagValue': 10,
             'numberOfHoldingsShown': 3,
             'pageLimit': 40,
-            'parameters': ['contenttype', 'facet', 'id', 'language', 'page', 'q', 'ref', 'subjectterms']
+            'parameters': ['contenttype', 'discipline', 'facet', 'id', 'language', 'page', 'q', 'ref', 'subjectterms']
         }
     },
 

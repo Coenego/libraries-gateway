@@ -190,6 +190,12 @@ $(function() {
             return '&s.fvf=' + $el.data('value');
         }).join('');
 
+
+
+        console.log('\nqueryString');
+        console.log(queryString);
+
+
         $.ajax({
             'url': 'widgets/getResults?' + queryString,
             'method': 'GET'
