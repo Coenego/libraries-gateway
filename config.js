@@ -108,34 +108,28 @@ config.constants = {
         'Book': {
             'displayInSearch': true,
             'displayName': 'Books',
-            'aquabrowser': 'Book',
             'summon': 'Book'
         },
         'EBook': {
             'displayInSearch': true,
             'displayName': 'EBooks',
-            'aquabrowser': 'EBook',
             'summon': 'eBook'
         },
         'Ejournal': {
             'displayInSearch': true,
             'displayName': 'Ejournals',
-            'aquabrowser': 'Ejournal',
             'summon': 'Ejournal'
         },
         'Manuscript': {
             'displayInSearch': true,
-            'aquabrowser': 'Manuscript',
             'summon': 'Manuscript'
         },
         'Journal': {
             'displayInSearch': true,
-            'aquabrowser': 'Journal',
             'summon': 'Journal Article'
         },
         'Paper': {
             'displayInSearch': true,
-            'aquabrowser': 'Paper',
             'summon': 'Paper'
         }
     }
@@ -168,7 +162,7 @@ config.nodes = {
             'minTagValue': 10,
             'numberOfHoldingsShown': 3,
             'pageLimit': 40,
-            'parameters': ['api', 'contenttype', 'facet', 'id', 'language', 'page', 'q', 'ref', 'subjectterms']
+            'parameters': ['contenttype', 'facet', 'id', 'language', 'page', 'q', 'ref', 'subjectterms']
         }
     },
 
