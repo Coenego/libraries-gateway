@@ -132,7 +132,7 @@ $(function() {
         _.each(config.disciplines, function(discipline, i, disciplines) {
             currentCol.push({
                 'label': discipline,
-                'value': encodeURIComponent(discipline.toLowerCase().replace(/\s/g, '_'))
+                'value': encodeURIComponent(discipline)
             });
             if ((i + 1) % modulo === 0 || (i + 1) === disciplines.length) {
                 cols.push(currentCol);
@@ -189,12 +189,6 @@ $(function() {
             var $el = $(el);
             return '&s.fvf=' + $el.data('value');
         }).join('');
-
-
-
-        console.log('\nqueryString');
-        console.log(queryString);
-
 
         $.ajax({
             'url': 'widgets/getResults?' + queryString,

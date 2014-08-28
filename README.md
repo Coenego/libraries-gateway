@@ -20,11 +20,11 @@ The libraries gateway offers information about each library, as well as a the li
 Considering the prerequisites and dependencies installed, we can now install the pending (node) packages using the following command:
 
 ```
-bower install
+sudo bower install --allow-root
 ```
 
 ```
-npm install -d
+sudo npm install -d
 ```
 
 To compile the LESS files, the following command should be run:

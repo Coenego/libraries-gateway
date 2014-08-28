@@ -18,6 +18,7 @@ define([
     'jquery',
     'config',
     'view/dropdown-selector',
+    'view/search-box',
     'bootstrap-collapse'
 ], function(_, $, config, DropdownSelector) {
     'use strict';
@@ -61,6 +62,16 @@ define([
             var $facets = $('.js-facet');
             $facets.on('show.bs.collapse', this.onFacetShow);
             $facets.on('hide.bs.collapse', this.onFacetHide);
+
+            // Show or hide the "more" facets
+            var $more = $('.lg-facet-more');
+            $more.on('click', function(e) {
+                var $container = $(e.currentTarget).parent().parent().find('.js-facet-more-container');
+                $container.toggle();
+                var txt = $container.is(':visible') ? 'less' : 'more';
+                $(e.currentTarget).find('.lg-facet-more-change').html(txt);
+                return false;
+            });
         },
 
         'getSearchData': function() {

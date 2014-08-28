@@ -17,6 +17,7 @@
     "lodash": "latest",
     "mysql": "latest",
     "node-static": "latest",
+    "normalizer": "latest",
     "pagination": "latest",
     "q": "latest",
     "request": "latest",

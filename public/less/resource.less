@@ -9,7 +9,7 @@
           box-sizing: border-box;
      -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  padding: 20px 15px;
+  padding: 0;
   height: 100%;
   text-align: center;
   background: #E4E4E4;
@@ -17,17 +17,29 @@
   img {
     max-height: 135px;
   }
+
+  .js-lg-btn-back {
+    display: none;
+    width: 100%;
+    height: 44px;
+    margin: 0 0 10px 0;
+    border: 0;
+  }
 }
 
 .lg-resource-img-outer {
   display: table;
   width: 100%;
-  height: 100%;
 }
 
 .lg-resource-img-inner {
+  padding-top: 10px;
   display: table-cell;
   vertical-align: text-top;
+}
+
+.lg-resource-actions {
+  text-align: left;
 }
 
 .lg-resource-properties {
@@ -49,7 +61,7 @@
     padding-right: 35px;
     font-size: 1.2em;
     margin: 0;
-    width: 80px;
+    width: 120px;
   }
 
   ul {

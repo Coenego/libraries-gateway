@@ -13,9 +13,19 @@
 
   // Heavier selector to overwrite project light..
   .campl-selected a.lg-facet-more {
-    float: right;
     font-weight: normal;
     color: #0072CF;
+    margin-top: 5px;
+    padding: 5px 0 0 0;
+    background: none !important;
+  }
+
+  li.lg-facet-type:first-letter {
+    text-transform: capitalize;
+  }
+
+  li:hover ul a span.lg-facet-numItems {
+    display: block;
   }
 
   li ul a,
@@ -23,6 +33,16 @@
     display: block;
     background-position: left 5px;
   }
+
+  li ul a span.lg-facet-numItems {
+    display: none;
+    float: right;
+    color: #AAA;
+  }
+}
+
+.lg-facets-overview {
+  background-color: #F7F7F7;
 }
 
 .lg-active-facets {
@@ -30,8 +50,13 @@
 }
 
 .lg-active-facet {
+  display: inline-block;
+  padding: 4px 5px;
+  margin-bottom: 8px;
+  margin-right: 4px;
+  border-radius: 4px;
+  background-color: rgb(197, 223, 246);
   font-weight: bold;
-  padding-right: 5px;
 
   a {
     font-weight: normal;
@@ -64,6 +89,14 @@
 
       &:last-child {
         padding: 3px 0 0 0;
+      }
+
+      > span.property {
+        margin-right: 5px;
+
+        > span.label {
+          color: #999;
+        }
       }
     }
   }

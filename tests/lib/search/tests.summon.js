@@ -87,7 +87,8 @@ var getItemsFromResults = function(records) {
                 'title': stripValue(_record.Title),
                 'url': _record.link,
                 'authors': stripValue(_record.Author),
-                'contenttype': stripValue(_record.ContentType)
+                'contenttype': stripValue(_record.ContentType),
+                'discipline': _record.Discipline
             };
 
             // Add the item to the items collection

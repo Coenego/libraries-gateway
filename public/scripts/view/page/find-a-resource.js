@@ -14,7 +14,8 @@
  */
 
 define([
-    'view/search-type-selector'
+    'view/search-type-selector',
+    'view/search-box'
 ], function(TypeSelector) {
     'use strict';
     return TypeSelector;

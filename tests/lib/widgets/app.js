@@ -52,14 +52,12 @@ var getResults = module.exports.getResults = function(req, res) {
             if (_.isArray(values)) {
                 _.each(values, function(value) {
                     if (value) {
-                        value = value.replace(/&/g, '&amp;');
-                        queryString.push(key + '=' + value);
+                        queryString.push(key + '=' + encodeURIComponent(value));
                     }
                 });
             } else {
                 if (values) {
-                    values = values.replace(/&/g, '&amp;');
-                    queryString.push(key + '=' + values);
+                    queryString.push(key + '=' + encodeURIComponent(values));
                 }
             }
         }

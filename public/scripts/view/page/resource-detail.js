@@ -24,15 +24,25 @@ define([
     _.extend(ResourceDetailPage.prototype, {
         'initialize': function() {
             this.bindEvents();
+
+            // Hide the backbutton if the referrer has an external origin
+            if (document.referrer.indexOf(document.location.host) > -1) {
+                $('.js-lg-btn-back').css('display', 'block');
+            }
         },
 
         'bindEvents': function() {
             $('.js-btn-print').on('click', this.onPrintClick);
+            $('.js-lg-btn-back').on('click', this.onBackClick);
         },
 
         'onPrintClick': function(event) {
             event.preventDefault();
             window.print();
+        },
+
+        'onBackClick': function(event) {
+            return window.history.back();
         }
     });
     return ResourceDetailPage;

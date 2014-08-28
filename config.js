@@ -110,21 +110,21 @@ config.constants = {
             'displayName': 'Books',
             'summon': 'Book'
         },
-        'EBook': {
+        'eBook': {
             'displayInSearch': true,
-            'displayName': 'EBooks',
+            'displayName': 'eBook',
             'summon': 'eBook'
         },
-        'Ejournal': {
+        'eJournal': {
             'displayInSearch': true,
-            'displayName': 'Ejournals',
-            'summon': 'Ejournal'
+            'displayName': 'eJournal',
+            'summon': 'eJournal'
         },
         'Manuscript': {
             'displayInSearch': true,
             'summon': 'Manuscript'
         },
-        'Journal': {
+        'Journal Article': {
             'displayInSearch': true,
             'summon': 'Journal Article'
         },
@@ -224,8 +224,7 @@ config.nodes = {
         'settings': {
             'minTagValue': 10,
             'numberOfHoldingsShown': 3,
-            'pageLimit': 40,
-            'parameters': ['contenttype', 'discipline', 'facet', 'id', 'language', 'page', 'q', 'ref', 'subjectterms']
+            'pageLimit': 40
         }
     },
 
